@@ -1,0 +1,47 @@
+{
+  "enabled": {
+    "type": "bool",
+    "default": true,
+    "description": "启用上下文窗口。关闭后不落盘、不注入、工具也不可用。"
+  },
+  "restore_n": {
+    "type": "int",
+    "default": 30,
+    "description": "重启后恢复多少条原文（仅在进程启动后的第一次请求注入一次）。"
+  },
+  "rolling_max_chars": {
+    "type": "int",
+    "default": 400,
+    "description": "滚动梗概的字数上限。她压缩时超过会被拒绝。"
+  },
+  "max_lines": {
+    "type": "int",
+    "default": 400,
+    "description": "每个会话最多保留多少条原文，超出自动丢弃最旧的。"
+  },
+  "inject_rolling": {
+    "type": "bool",
+    "default": true,
+    "description": "每轮是否注入滚动梗概。关掉后她仍能压缩，但看不到。"
+  },
+  "max_read": {
+    "type": "int",
+    "default": 60,
+    "description": "read_context_log 单次最多返回多少条。"
+  },
+  "soft_after": {
+    "type": "int",
+    "default": 30,
+    "description": "上次压缩后又攒了多少条开始轻提示。她看到提示会自己决定要不要收拾。"
+  },
+  "hard_after": {
+    "type": "int",
+    "default": 60,
+    "description": "攒到多少条升级为硬提示（语气更重，说明再不压就要丢最早的）。"
+  },
+  "hard_ratio": {
+    "type": "float",
+    "default": 0.8,
+    "description": "原文总量占到 max_lines 的这个比例时，直接算硬压力。"
+  }
+}

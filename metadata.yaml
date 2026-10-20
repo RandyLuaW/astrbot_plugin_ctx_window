@@ -1,0 +1,15 @@
+name: astrbot_plugin_ctx_window
+display_name: 上下文窗口
+desc: "把原始聊天记录落盘，重启后能接上话；并让她自己把旧对话压成一段梗概，之后每轮只带梗概不重复原文。和 iris_memory 分工——那边管事实与检索，这边管经历与滚动。不调用任何模型，压缩必须她本人写。"
+short_desc: 聊天记录落盘（带图片指纹）+ 自写滚动梗概
+author: Randy Lua
+repo: https://github.com/RandyLuaW/astrbot_plugin_ctx_window
+version: 1.1.0
+astrbot_version: ">=4.24.0"
+support_platforms:
+  - aiocqhttp
+tags:
+  - 上下文
+  - 记忆
+  - 压缩
+  - 滑动窗口
