@@ -1,6 +1,6 @@
 # Context Window: persist raw chat logs, let the model write its own rolling summary
 
-> AstrBot plugin · Raw messages on disk + a rolling summary the model writes itself
+> AstrBot plugin · Raw logs on disk, on-demand lookup, model-owned compression
 
 ## The problem
 
